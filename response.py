@@ -15,11 +15,10 @@ def get_bybit_news():
         news_headlines = soup.find_all('h2', class_='post-title')  # Обновите класс или тег, если требуется
 
         # Выводим заголовки новостей
-        for headline in news_headlines:
-            print(headline.text.strip())
+        for index, headline in enumerate(news_headlines, start=1):
+            print(f"{index}. {headline.text.strip()}")
 
     else:
         print(f"Ошибка при получении страницы. Код статуса: {response.status_code}")
 
-#if __name__ == "__main__":
-#    get_bybit_news()
+get_bybit_news()
