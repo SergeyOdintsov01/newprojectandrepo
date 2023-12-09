@@ -21,5 +21,5 @@ def get_bybit_news():
     else:
         print(f"Ошибка при получении страницы. Код статуса: {response.status_code}")
 
-if __name__ == "__main__":
-    get_bybit_news()
+#if __name__ == "__main__":
+#    get_bybit_news()
